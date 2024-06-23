@@ -18,11 +18,6 @@ jobs:
     
     - run: yarn install --frozen-lockfile
 
-    - name: bundling
-      working-directory: ./src/bundling
-      run: |
-        ./minify-js.bat
-
     - run: yarn pack --filename=package.tgz
 
     - uses: Klemensas/action-autotag@stable
